@@ -1,46 +1,93 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 顧客管理アプリケーション
 
-## Available Scripts
+このアプリケーションは、React を使用して作成されたシンプルな顧客管理システムです。ユーザーはログイン後、顧客一覧ページにアクセスすることができます。バックエンドは現在含まれていません。
 
-In the project directory, you can run:
+## デモ
 
-### `npm start`
+- アプリケーションは、ユーザーが正しいログイン情報（`admin` と `password`）を入力すると、顧客一覧ページに遷移します。
+- ログイン失敗時には、アラートが表示されます。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 機能
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. **ログイン画面**
+   - ユーザー名とパスワードを入力するフォームがあります。
+   - 正しいログイン情報（`admin` と `password`）を入力すると、顧客一覧ページに遷移します。
+   - 不正な情報を入力した場合、エラーメッセージが表示されます。
 
-### `npm test`
+2. **顧客一覧画面**
+   - 現在、顧客一覧ページはプレースホルダとして存在します。追加機能やデータの表示は未実装です。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## インストール方法
 
-### `npm run build`
+このプロジェクトをローカルで実行するには、以下の手順を行ってください。
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. リポジトリをクローン
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/yourusername/customer-management-app.git
+cd customer-management-app
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. 必要な依存関係をインストール
 
-### `npm run eject`
+プロジェクトのルートディレクトリで以下のコマンドを実行して、依存関係をインストールします。
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+または、yarn を使用する場合：
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+yarn install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 3. 開発サーバーを起動
 
-## Learn More
+依存関係をインストールした後、以下のコマンドで開発サーバーを起動します。
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+または、yarn を使用する場合：
+
+```bash
+yarn start
+```
+
+開発サーバーが起動すると、ブラウザで [http://localhost:3000](http://localhost:3000) にアクセスできるようになります。
+
+## ファイル構成
+
+```
+/src
+  /components
+    - LoginPage.jsx    # ログインページコンポーネント
+    - CustomerListPage.jsx  # 顧客一覧ページコンポーネント
+  App.js              # アプリケーションのメインコンポーネント
+  index.js            # アプリケーションのエントリーポイント
+  styles.css          # グローバルCSS
+```
+
+## 使用技術
+
+- **React**: ユーザーインターフェースの構築に使用
+- **React Router**: ルーティング（ページ遷移）を管理
+- **JavaScript (ES6+)**: モダンな JavaScript を使用
+- **CSS**: 基本的なスタイル設定（必要に応じて追加）
+
+## 今後の予定
+
+- 顧客データの追加、編集、削除機能の実装
+- バックエンドとの連携（データベースへのアクセス）
+- 認証とセキュリティの強化
+
+## ライセンス
+
+MIT License
+
+---
+
+このリポジトリに関する質問や提案があれば、[GitHub Issues](https://github.com/yourusername/customer-management-app/issues) を利用してください。
